@@ -114,8 +114,71 @@
                 </div>
             </div>
 
-            <!-- Add more questions up to 20 -->
-            <!-- For brevity, I will add 20 questions in JavaScript array later -->
+            <!-- Question 5 -->
+            <div class="question">
+                <h3>5. Which planet is closest to the Sun?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="Mercury"> Mercury</label>
+                    <label><input type="radio" name="q5" value="Venus"> Venus</label>
+                    <label><input type="radio" name="q5" value="Earth"> Earth</label>
+                    <label><input type="radio" name="q5" value="Mars"> Mars</label>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+                <h3>6. Who was the first person to walk on the Moon?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="Neil Armstrong"> Neil Armstrong</label>
+                    <label><input type="radio" name="q6" value="Buzz Aldrin"> Buzz Aldrin</label>
+                    <label><input type="radio" name="q6" value="Yuri Gagarin"> Yuri Gagarin</label>
+                    <label><input type="radio" name="q6" value="Michael Collins"> Michael Collins</label>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question">
+                <h3>7. What is the Sun primarily made of?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="Hydrogen"> Hydrogen</label>
+                    <label><input type="radio" name="q7" value="Helium"> Helium</label>
+                    <label><input type="radio" name="q7" value="Oxygen"> Oxygen</label>
+                    <label><input type="radio" name="q7" value="Carbon"> Carbon</label>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">
+                <h3>8. What is the closest planet to Earth?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="Venus"> Venus</label>
+                    <label><input type="radio" name="q8" value="Mars"> Mars</label>
+                    <label><input type="radio" name="q8" value="Mercury"> Mercury</label>
+                    <label><input type="radio" name="q8" value="Jupiter"> Jupiter</label>
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question">
+                <h3>9. What type of celestial body is the Moon?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="Satellite"> Satellite</label>
+                    <label><input type="radio" name="q9" value="Planet"> Planet</label>
+                    <label><input type="radio" name="q9" value="Star"> Star</label>
+                    <label><input type="radio" name="q9" value="Asteroid"> Asteroid</label>
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question">
+                <h3>10. Which planet is known for its Great Red Spot?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="Jupiter"> Jupiter</label>
+                    <label><input type="radio" name="q10" value="Mars"> Mars</label>
+                    <label><input type="radio" name="q10" value="Saturn"> Saturn</label>
+                    <label><input type="radio" name="q10" value="Neptune"> Neptune</label>
+                </div>
+            </div>
 
             <button type="button" onclick="checkQuiz()">Submit Quiz</button>
         </form>
@@ -128,33 +191,23 @@
             q2: "Mars",
             q3: "Milky Way",
             q4: "Saturn",
-            q5: "Venus",
-            q6: "Mercury",
-            q7: "Neil Armstrong",
-            q8: "Sun",
-            q9: "Earth",
-            q10: "Mars",
-            q11: "Jupiter",
-            q12: "Black Hole",
-            q13: "Apollo 11",
-            q14: "Milky Way",
-            q15: "Uranus",
-            q16: "Comet",
-            q17: "Venus",
-            q18: "Orion",
-            q19: "Mars",
-            q20: "Andromeda"
+            q5: "Mercury",
+            q6: "Neil Armstrong",
+            q7: "Hydrogen",
+            q8: "Venus",
+            q9: "Satellite",
+            q10: "Jupiter"
         };
 
         function checkQuiz() {
             let score = 0;
-            for (let i = 1; i <= 20; i++) {
+            for (let i = 1; i <= 10; i++) {
                 let q = document.querySelector(`input[name="q${i}"]:checked`);
                 if (q && q.value === answers[`q${i}`]) {
                     score++;
                 }
             }
-            document.getElementById("result").innerText = `Your Score: ${score} / 20`;
+            document.getElementById("result").innerText = `Your Score: ${score} / 10`;
         }
     </script>
 </body>
